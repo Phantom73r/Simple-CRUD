@@ -1,0 +1,25 @@
+main{
+    font-family: "Righteous", sans-serif;
+}
+.icons{
+ 
+font-size: 2rem;
+background-image: linear-gradient(to right, #3ca55c, #e7d93e);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.row{
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+}
+#bookmarker{
+    font-family: "Pacifico", cursive;
+}
+.form-control{
+    border: none;
+}
+.form-control:focus{
+    border-color: none !important; 
+    box-shadow: none !important;
+}

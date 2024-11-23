@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<main>
+    <h3 class="h2 display-3 py-4 text-center"  id="bookmarker">Bookmarker</h3>
+    <div class="container text-center">
+        <div class="row ">
+     <h2 class="icons mt-3">
+         <i class="fa-solid fa-bookmark"></i>
+         Bookmark your favorite sites 
+         <i class="fa-solid fa-bookmark" ></i>
+       </h2>
+<div class="p-3">
+    <div class="alert alert-danger text-center d-none" id="formAlert">Form Invalid</div>
+    <div class="form-floating mb-5">
+        <input  type="text" id="siteName" oninput="validateForm(this)" class="form-control" id="siteName" placeholder="Enter the site name">
+        <p class="alert text-danger my-1 d-none text-start py-2">The link name should start with a capital letter and
+            make the name between 5 to 15 characters
+        </p>
+        <label for="siteName"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+      
+      </div>
+     
+    <div class="form-floating mb-2">
+        <input type="text" class="form-control" oninput="validateForm(this)" id="siteLink" placeholder="Enter the site Link">
+         <p class="alert text-danger my-1 d-none text-start py-2">The link must contain from 3 to 30 characters and ends
+            with <strong class="text-danger-emphasis">.com</strong>
+        </p>
+        <label for="siteLink"><i class="fa-solid fa-link pe-2"></i>Site Link</label>
+      </div>
+   
+      <button id="addBtn" class="btn btn-primary mx-auto mt-5" onclick="addLinks()" style="width: 8rem;" type="submit">Submit</button>
+      <button id="updateBtn" class="btn btn-success mx-auto mt-5 d-none" onclick="setNewData()" style="width: 8rem;">Update</button>
+</div>
+</div>
+<table class="table mt-3 text-center text-capitalize">
+<thead>
+<tr>
+    <th>index</th>
+    <th>Website Name</th>
+    <th>visit</th>
+    <th>delete</th>
+    <th>edit</th>
+</tr>
+</thead>
+<tbody id="tableContent">
+
+</tbody>
+</table>
+
+    </div>
+</main>
+
+
+
+    <script src="JS/index.js"></script>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>
